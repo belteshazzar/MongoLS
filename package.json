@@ -1,0 +1,33 @@
+{
+  "name": "mongols",
+  "version": "1.0.0",
+  "description": "mongo api interface to localStorage and plain js objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belteshazzar/MongoLS.git"
+  },
+  "keywords": [
+    "mongo",
+    "db",
+    "mongodb",
+    "localstorage",
+    "database",
+    "query",
+    "local",
+    "storage"
+  ],
+  "author": "Daniel Walton <daniel@belteshazzar.com> (http://www.belteshazzar.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/belteshazzar/MongoLS/issues"
+  },
+  "homepage": "https://github.com/belteshazzar/MongoLS#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
