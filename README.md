@@ -9,8 +9,6 @@ A JavaScript implementation of the mongo query api for plain objects and HTML5 l
 
 [![Coverage Status](https://coveralls.io/repos/github/belteshazzar/MongoLS/badge.svg?branch=master)](https://coveralls.io/github/belteshazzar/MongoLS?branch=master)
 
-[![Node version](https://img.shields.io/node/v/[MongoLS].svg?style=flat)](http://nodejs.org/download/)
-
 ## Installation
 
   `npm install mongols`
