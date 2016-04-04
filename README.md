@@ -5,6 +5,9 @@ MongoLS
 
 A JavaScript implementation of the mongo query api for plain objects and HTML5 localStorage
 
+[![Build Status](https://travis-ci.org/belteshazzar/MongoLS.svg?branch=master)](https://travis-ci.org/belteshazzar/MongoLS)
+
+[![Coverage Status](https://coveralls.io/repos/github/belteshazzar/MongoLS/badge.svg?branch=master)](https://coveralls.io/github/belteshazzar/MongoLS?branch=master)
 
 ## Installation
 
