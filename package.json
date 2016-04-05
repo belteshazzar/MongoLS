@@ -1,6 +1,6 @@
 {
   "name": "mongols",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "mongo api interface to localStorage and plain js objects",
   "main": "mongols.js",
   "scripts": {
