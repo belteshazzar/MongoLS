@@ -3,6 +3,50 @@
 var expect = require('chai').expect;
 var MongoLS = require('../MongoLS');
 
+describe("DB no options", function() {
+
+	var db;
+	
+	before(function() {
+	});
+
+	after(function() {
+	});
+
+	beforeEach(function() {
+		db = new MongoLS.DB();
+	});
+
+	afterEach(function() {
+		db = null;
+	});
+
+	it('should have no collections by default', function() {			
+		expect(db.getCollectionNames().length).to.equal(0);
+	});
+
+	it('should be able to create a collection with default store', function() {			
+		db.createCollection("myCollection");
+		expect(db.getCollectionNames().length).to.equal(1);
+		expect(db.myCollection).to.not.be.undefined;
+	});
+
+	it('should be able to create a collection with the provided store', function() {			
+		db.createCollection("myCollection");
+		expect(db.getCollectionNames().length).to.equal(1);
+		expect(db.myCollection).to.not.be.undefined;
+	});
+
+	it('should be able to drop collection', function() {			
+		db.createCollection("myCollection");
+		expect(db.getCollectionNames().length).to.equal(1);
+		expect(db.myCollection).to.not.be.undefined;
+		db.dropDatabase();
+		expect(db.getCollectionNames().length).to.equal(0);
+		expect(db.myCollection).to.be.undefined;
+	});
+});
+
 describe("DB", function() {
 
 	var db;

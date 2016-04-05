@@ -961,7 +961,7 @@ module.exports.DB = function(options) {
 		createCollection : function(name) {
 			if (!name) return;
 			if (name=="localStorage") this.localStorage = new Collection(this,(options.localStorage?options.localStorage:module.exports.LocalStorageStore));
-			else this[name] = new Collection(this,(options.storage?new options.storage():new module.exports.ObjectStore()));
+			else this[name] = new Collection(this,(options && options.storage?new options.storage():new module.exports.ObjectStore()));
 		},
 		currentOp : function() { throw "Not Implemented"; },
 		dropDatabase : function() {
