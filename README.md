@@ -15,7 +15,7 @@ A JavaScript implementation of the mongo query api for plain objects and HTML5 l
 
 ## Usage
 
-    var numFormatter = require('mongols');
+    var mongols = require('mongols');
 
     var formattedNum = numFormatter(35666);
   
