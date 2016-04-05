@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var MongoLS = require('../MongoLS');
+var MongoLS = require('../main.js');
 
 describe("DB no options", function() {
 

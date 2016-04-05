@@ -1,11 +1,12 @@
 {
   "name": "mongols",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "mongo api interface to localStorage and plain js objects",
-  "main": "mongols.js",
+  "main": "main.js",
   "scripts": {
     "test": "mocha --reporter spec",
-    "cover": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec test/*"
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec test/*",
+    "build-js": "browserify mongols-web.js -o mongols.js"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.2",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "browserify": "latest"
   }
 }
