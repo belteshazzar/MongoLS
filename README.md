@@ -52,6 +52,139 @@ Query localStorage or other collections (note that in the browser the localStora
        alert(JSON.stringify(cur.toArray()));
     </script>
 
-## Contributing
+# API Status
 
-If you find this useful ... well, lets not kid around, it basically works, but there is a lot of things to fix up. All help is greatly appreciated!
+The following table summarises the API implementation status.
+
+## Database Methods
+
+| Name                         | Implemented     |
+|------------------------------|-----------------|
+| db.cloneCollection           | no              |
+| db.cloneDatabase             | no              |
+| db.commandHelp               | no              |
+| db.copyDatabase              | no              |
+| db.createCollection          | Yes             |
+| db.currentOp                 | N/A             |
+| db.dropDatabase              | Yes             |
+| db.eval                      | N/A             |
+| db.fsyncLock                 | N/A             |
+| db.fsyncUnlock               | N/A             |
+| db.getCollection             | no              |
+| db.getCollectionInfos        | no              |
+| db.getCollectionNames        | Yes             |
+| db.getLastError              | no              |
+| db.getLastErrorObj           | no              |
+| db.getLogComponents          | N/A             |
+| db.getMongo                  | N/A             |
+| db.getName                   | no              |
+| db.getPrevError              | no              |
+| db.getProfilingLevel         | N/A             |
+| db.getProfilingStatus        | N/A             |
+| db.getReplicationInfo        | N/A             |
+| db.getSiblingDB              | N/A             |
+| db.help                      | Yes             |
+| db.hostInfo                  | N/A             |
+| db.isMaster                  | N/A             |
+| db.killOp                    | N/A             |
+| db.listCommands              | N/A             |
+| db.loadServerScripts         | N/A             |
+| db.printCollectionStats      | N/A             |
+| db.printReplicationInfo      | N/A             |
+| db.printShardingStatus       | N/A             |
+| db.printSlaveReplicationInfo | N/A             |
+| db.repairDatabase            | N/A             |
+| db.resetError                | N/A             |
+| db.runCommand                | N/A             |
+| db.serverBuildInfo           | N/A             |
+| db.serverCmdLineOpts         | N/A             |
+| db.serverStatus              | N/A             |
+| db.setLogLevel               | N/A             |
+| db.setProfilingLevel         | N/A             |
+| db.shutdownServer            | N/A             |
+| db.stats                     | no              |
+| db.version                   | no              |
+| db.upgradeCheck              | N/A             |
+
+## Collection Methods
+
+| Name                               | Implemented |
+|------------------------------------|-------------|
+| db.collection.aggregate            | no          | 
+| db.collection.bulkWrite            | no          | 
+| db.collection.count                | yes         |
+| db.collection.copyTo               | yes         |
+| db.collection.createIndex          | no          | 
+| db.collection.dataSize             | no          | 
+| db.collection.deleteOne            | yes         |
+| db.collection.deleteMany           | yes         |
+| db.collection.distinct             | yes         |
+| db.collection.drop                 | yes         |
+| db.collection.dropIndex            | no          | 
+| db.collection.dropIndexes          | no          | 
+| db.collection.ensureIndex          | no          | 
+| db.collection.explain              | no          | 
+| db.collection.find                 | yes         |
+| db.collection.findAndModify        | no          | 
+| db.collection.findOne              | yes         |
+| db.collection.findOneAndDelete     | yes         |
+| db.collection.findOneAndReplace    | yes         |
+| db.collection.findOneAndUpdate     | yes         |
+| db.collection.getIndexes           | no          |  
+| db.collection.getShardDistribution | N/A         | 
+| db.collection.getShardVersion      | N/A         | 
+| db.collection.group                | no          | 
+| db.collection.insert               | yes         |
+| db.collection.insertOne            | yes         |
+| db.collection.insertMany           | yes         |
+| db.collection.isCapped             | no          | 
+| db.collection.mapReduce            | no          | 
+| db.collection.reIndex              | no          | 
+| db.collection.replaceOne           | yes         |
+| db.collection.remove               | yes         |
+| db.collection.renameCollection     | no          | 
+| db.collection.save                 | no          | 
+| db.collection.stats                | no          | 
+| db.collection.storageSize          | no          | 
+| db.collection.totalSize            | no          | 
+| db.collection.totalIndexSize       | no          | 
+| db.collection.update               | yes         |
+| db.collection.updateOne            | yes         |
+| db.collection.updateMany           | yes         |
+| db.collection.validate             | no          |
+
+## Cursor Methods
+
+| Name                    | Implemented     |
+|-------------------------|-----------------|
+| cursor.batchSize        | N/A             |
+| cursor.close            | N/A             |
+| cursor.comment          | no              |
+| cursor.count            | yes             |
+| cursor.explain          | N/A             |
+| cursor.forEach          | yes             |
+| cursor.hasNext          | yes             |
+| cursor.hint             | N/A             |
+| cursor.itcount          | no              |
+| cursor.limit            | yes             |
+| cursor.map              | yes             |
+| cursor.maxScan          | N/A             |
+| cursor.maxTimeMS        | N/A             |
+| cursor.max              | no              |
+| cursor.min              | no              |
+| cursor.next             | yes             |
+| cursor.noCursorTimeout  | N/A             |
+| cursor.objsLeftInBatch  | N/A             |
+| cursor.pretty           | no              |
+| cursor.readConcern      | N/A             |
+| cursor.readPref         | N/A             |
+| cursor.returnKey        | N/A             |
+| cursor.showRecordId     | N/A             |
+| cursor.size             | no              |
+| cursor.skip             | yes             |
+| cursor.snapshot         | no              |
+| cursor.sort             | yes             |
+| cursor.tailable         | no              |
+| cursor.toArray          | yes             |
+| cursor.next()           | yes             |
+
