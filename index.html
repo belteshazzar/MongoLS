@@ -7,8 +7,7 @@
 	<script src="js/jquery-1.7.2.min.js"></script>
 	<script src="js/jquery.terminal-0.9.3.js"></script>
 	<script src="js/unix_formatting.js"></script>
-	<script src="js/mongo-interface.js"></script>
-	<script src="js/mongo-interface-test.js"></script>
+	<script src="js/mongols.js"></script>
 </head>
 <body>
 
@@ -40,24 +39,11 @@
 				prompt : 'js> '
 			});
 			
-			db = new MongoInterface.DB({
-				print : term.echo,
-				storage : MongoInterface.ObjectStore
+			db = new MongoLS.DB({
+				print : term.echo
 			});
+			console.log(db.localStorage.find());
 			
-			if (true) {
-				testDatabase(db);
-				testCollection(db, "localStorage",term.echo);
-				testCollection(db, "fred",term.echo);
-				testCursor(db, "localStorage");
-				testCursor(db, "fred");
-
-				db = new MongoInterface.DB({
-					print : term.echo,
-					storage : MongoInterface.ObjectStore
-				});
-			}
-
 			if (db.localStorage.find().count() <= 2) {
 				db.localStorage.insert({
 					age : 4,
